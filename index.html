@@ -470,11 +470,11 @@
           </ul>
         </div>
         <div class="resume-item">
-          <h4>Smart Gate Opening System</h4>
-          <p><em>Technologies: OpenCV, Raspberry Pi Pico, Firebase</em></p>
+          <h4>Smart Blind stick </h4>
+          <p><em>HTML, Tailwind CSS , JS, Yolov8, Esp32, API , AWS, Firebase Admin</em></p>
           <ul>
-            <li>Created an IoT-based facial recognition system for automated gate access.</li>
-            <li>Integrated custom datasets and real-time user verification with gate control mechanisms.</li>
+            <li>Developed a haptic device with ultrasonic and water sensors for the blind.Built a guardian dashboard for real-time tracking, Firebase alerts, and camera streaming.</li>
+            <li>Created an app with object & currency identification, navigation, and voice recognition.Selected for SIH among 64 college teams under NIEPID, Ministry of Social Justice & Empowerment.</li>
           </ul>
         </div>
       </div>
@@ -872,3 +872,26 @@
 </body>
 
 </html>
+<script>
+  document.addEventListener('scroll', function() {
+  const elements = document.querySelectorAll('.fade-in');
+  elements.forEach(element => {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      element.classList.add('visible');
+    }
+  });
+});
+</script>
+<style>
+  .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
