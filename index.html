@@ -29,7 +29,64 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <style>
+    .about .img-fluid {
+      max-height: 500px;
+      width: auto;
+    }
+    .skill-icon {
+      font-size: xx-small;
+      margin-bottom: 5px;
+    }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      margin-top: -20px;
+    }
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 50px;
+    }
+    .skill-name {
+      font-size: x-small;
+      margin-top: 5px;
+    }
+    .skill-category {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    /* Professional color scheme for skill icons */
+    .python-icon { color: #3776AB; }
+    .java-icon { color: #007396; }
+    .js-icon { color: #F7DF1E; }
+    .cpp-icon { color: #00599C; }
+    .brain-icon { color: #FF6F61; }
+    .react-icon { color: #61DAFB; }
+    .node-icon { color: #339933; }
+    .django-icon { color: #092E20; }
+    .flask-icon { color: #000000; }
+    .spring-icon { color: #6DB33F; }
+    .html-icon { color: #E34F26; }
+    .css-icon { color: #1572B6; }
+    .bootstrap-icon { color: #7952B3; }
+    .aws-icon { color: #FF9900; }
+    .google-icon { color: #4285F4; }
+    .mongodb-icon { color: #47A248; }
+    .mysql-icon { color: #4479A1; }
+    .postgresql-icon { color: #336791; }
+    .git-icon { color: #F05032; }
+    .docker-icon { color: #2496ED; }
+    .postman-icon { color: #FF6C37; }
+    .figma-icon { color: #F24E1E; }
+    .redis-icon { color: #DC382D; }
+    .firebase-icon { color: #FFCA28; }
+    .rest-icon { color: #009688; }
+  </style>
   <!-- =======================================================
   * Template Name: MyResume
   * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -165,8 +222,117 @@
                 </ul>
               </div>
             </div>
-            <p class="py-3">
-              Currently pursuing a Bachelor's in Computer Science at Amrita Vishwa Vidyapeetham, I specialize in web development, deep learning, and IoT systems. My experience includes building responsive websites, predictive analytics tools, and smart IoT solutions. I actively contribute to impactful projects like sports management systems, real-time sentiment analysis platforms, and early glaucoma detection applications.
+            <p>
+              <h4>My Skills</h4>
+          
+              <div class="skills-container">
+                <div class="skill-item">
+                  <i class="fab fa-python skill-icon python-icon"></i>
+                  <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-java skill-icon java-icon"></i>
+                  <span class="skill-name">Java</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-js skill-icon js-icon"></i>
+                  <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-cuttlefish skill-icon cpp-icon"></i>
+                  <span class="skill-name">C++</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-brain skill-icon brain-icon"></i>
+                  <span class="skill-name">NLP Transformers</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-react skill-icon react-icon"></i>
+                  <span class="skill-name">React.js</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-node-js skill-icon node-icon"></i>
+                  <span class="skill-name">Node.js</span>
+                </div>
+                <div class="skill-item">
+                  <img src="https://i.imgur.com/yORpYky.png" alt="Express.js" class="skill-icon" style="height: 54px;" />
+                  <span class="skill-name">Express.js</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-python skill-icon django-icon"></i>
+                  <span class="skill-name">Django</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-python skill-icon flask-icon"></i>
+                  <span class="skill-name">Flask</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-java skill-icon spring-icon"></i>
+                  <span class="skill-name">Spring Boot</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-html5 skill-icon html-icon"></i>
+                  <span class="skill-name">HTML</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-css3-alt skill-icon css-icon"></i>
+                  <span class="skill-name">CSS</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-bootstrap skill-icon bootstrap-icon"></i>
+                  <span class="skill-name">Bootstrap</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-aws skill-icon aws-icon"></i>
+                  <span class="skill-name">AWS</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-google skill-icon google-icon"></i>
+                  <span class="skill-name">GCP</span>
+                </div>
+                <div class="skill-item">
+                  <img src="https://i.imgur.com/NyePiga.png" alt="MongoDB" class="skill-icon" style="height: 54px;" />
+                  <span class="skill-name">MongoDB</span>
+                </div>
+                <div class="skill-item">
+                  <img src="https://i.imgur.com/R96lAeD.png" alt="MySQL" class="skill-icon" style="height: 54px;" />
+                  <span class="skill-name">MySQL</span>
+                </div>
+                <div class="skill-item">
+                  <img src="https://i.imgur.com/QElyOej.png" alt="PostgreSQL" class="skill-icon" style="height: 54px;" />
+                  <span class="skill-name">PostgreSQL</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-github skill-icon git-icon"></i>
+                  <span class="skill-name">Git</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-docker skill-icon docker-icon"></i>
+                  <span class="skill-name">Docker</span>
+                </div>
+                <div class="skill-item">
+                  <img src="https://i.imgur.com/GZmmKYL.png" alt="Redis" class="skill-icon" style="height: 54px;" />
+                  <span class="skill-name">Postman</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-figma skill-icon figma-icon"></i>
+                  <span class="skill-name">Figma</span>
+                </div>
+                <div class="skill-item">
+                  <img src="https://i.imgur.com/HJzq9HC.png" alt="Redis" class="skill-icon" style="height: 54px;" />
+                  <span class="skill-name">Redis</span>
+                </div>
+                <div class="skill-item">
+                  <img src="https://i.imgur.com/TdxMCyo.png" alt="firebase" class="skill-icon" style="height: 54px;" />
+                  <span class="skill-name">Firebase</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-exchange-alt skill-icon rest-icon"></i>
+                  <span class="skill-name">REST API</span>
+                </div>
+              </div>
+              
+                
             </p>
           </div>
         </div>
@@ -177,235 +343,9 @@
     
 
    
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>With a strong foundation in software development, I specialize in various programming languages, frameworks, and technologies, empowering me to build innovative solutions in web development, AI, and IoT</p>
-      </div><!-- End Section Title -->
-      <div class="container skills-container">
-        <div class="row">
-            <!-- Programming Languages -->
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-primary">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="skill-name">Python</div>
-                    <span class="proficiency-level expert">Expert</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-danger">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <div class="skill-name">HTML</div>
-                    <span class="proficiency-level expert">Expert</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-primary">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <div class="skill-name">CSS</div>
-                    <span class="proficiency-level expert">Expert</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-secondary">
-                        <i class="fab fa-bootstrap"></i>
-                    </div>
-                    <div class="skill-name">Bootstrap</div>
-                    <span class="proficiency-level expert">Expert</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-teal">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <div class="skill-name">Tailwind CSS</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-warning">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <div class="skill-name">JavaScript</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-info">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <div class="skill-name">React.js</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-success">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <div class="skill-name">Node.js</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-info">
-                        <i class="fab fa-php"></i>
-                    </div>
-                    <div class="skill-name">PHP</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-primary">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="skill-name">MySQL</div>
-                    <span class="proficiency-level expert">Expert</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-success">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <div class="skill-name">Firebase</div>
-                    <span class="proficiency-level expert">Expert</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-secondary">
-                        <i class="fab fa-docker"></i>
-                    </div>
-                    <div class="skill-name">Docker</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-primary">
-                        <i class="fab fa-java"></i>
-                    </div>
-                    <div class="skill-name">Java</div>
-                    <span class="proficiency-level beginner">Beginner</span>
-                </div>
-            </div>
-            
-            <!-- New Skills Added -->
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-info">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="skill-name">Deep Learning CV</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-              <div class="skill-card">
-                  <div class="skill-icon text-secondary">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" alt="Flask Icon" style="width: 55px; height: 45px;">
-                  </div>
-                  <div class="skill-name">Flask</div>
-                  <span class="proficiency-level intermediate">Intermediate</span>
-              </div>
-          </div>
-          
-          
-          
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-secondary">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="skill-name">Machine Learning</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-dark">
-                        <i class="fab fa-git-alt"></i>
-                    </div>
-                    <div class="skill-name">Git</div>
-                    <span class="proficiency-level expert">Expert</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-primary">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="skill-name">C++</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-success">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="skill-name">Django</div>
-                    <span class="proficiency-level beginner">Beginner</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-success">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="skill-name">MongoDB</div>
-                    <span class="proficiency-level beginner">Beginner</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-warning">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <div class="skill-name">IoT</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-info">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <div class="skill-name">Data Analysis</div>
-                    <span class="proficiency-level intermediate">Intermediate</span>
-                </div>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
-                    <div class="skill-icon text-primary">
-                        <i class="fab fa-java"></i>
-                    </div>
-                    <div class="skill-name">Java</div>
-                    <span class="proficiency-level beginner">Beginner</span>
-                </div>
-            </div>
-            
-        </div>
-        </div>
-    </div>
-
-    </section><!-- /Skills Section -->
+    
+    <!-- /Skills Section -->
 
     <!-- Resume Section -->
 <!-- Resume Section -->
