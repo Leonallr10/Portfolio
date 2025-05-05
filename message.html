@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="w-full max-w-lg p-8 bg-white rounded-2xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-center">Contact Us</h2>
+    <form id="contactForm" class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+        <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-indigo-100" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Your Email</label>
+        <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-indigo-100" />
+      </div>
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700">Your Phone</label>
+        <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-indigo-100" />
+      </div>
+      <div>
+        <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+        <input type="text" id="subject" name="subject" required class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-indigo-100" />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring focus:ring-indigo-100"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const name = form.name.value;
+      const email = form.email.value;
+      const phone = form.phone.value;
+      const subject = form.subject.value;
+      const message = form.message.value;
+      const fullMessage = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${message}`;
+
+      // 1. Send email via mailto
+      const mailtoLink = `mailto:leonalrobinlr10@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullMessage)}`;
+      window.open(mailtoLink, '_blank');
+
+      // 2. Send WhatsApp message
+      const whatsappNumber = '8248731433'; // include country code if needed, e.g., '918248731433'
+      const waLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(fullMessage)}`;
+      window.open(waLink, '_blank');
+
+      // 3. Send Telegram message via Bot API
+      const botToken = '7724481464:AAEx_aZx3WQeELgFNUeKYNUlFwYkLB0n6yE';
+      const chatId = '1980153681';
+      try {
+        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chat_id: chatId, text: fullMessage })
+        });
+      } catch (err) {
+        console.error('Telegram API error:', err);
+        alert('Could not send message via Telegram.');
+      }
+
+      alert('Your message has been sent via Email, WhatsApp, and Telegram!');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
